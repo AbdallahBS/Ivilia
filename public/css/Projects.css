@@ -1,0 +1,156 @@
+/* Image Zoom on Hover */
+.element-item img {
+    transition: transform 0.3s ease;
+  }
+  
+  .element-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Overlay Slide Up Effect */
+  .element-item-overlay {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .element-item:hover .element-item-overlay {
+    bottom: 0;
+    opacity: 1;
+  }
+  /* Reset some basic elements */
+body, h2, p, button {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Base container styles */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  /* Main Heading */
+  h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Filter Button Group */
+  .button-group {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .button-group .button {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button-group .button:hover,
+  .button-group .button.is-checked {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Project Grid */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .element-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .element-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .element-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Overlay Text */
+  .element-item-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .element-item:hover .element-item-overlay {
+    bottom: 0;
+    opacity: 1;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .element-item {
+      max-width: 48%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .element-item {
+      max-width: 100%;
+    }
+  }
+  /* Base transition for the image grid */
+.grid {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  /* Hide the grid during the transition */
+  .grid.fade-out {
+    opacity: 0;
+  }
+  
+  /* Show the grid after transition */
+  .grid.fade-in {
+    opacity: 1;
+  }
+  
